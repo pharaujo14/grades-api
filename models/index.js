@@ -32,7 +32,7 @@ const gradesSchema = mongoose.Schema({
 });
 
 gradesSchema.method('toJSON', function () {
-  const { __v, _id, ...object } = this.toObject();
+  const { _id, ...object } = this.toObject();
   object.id = _id;
   return object;
 });
